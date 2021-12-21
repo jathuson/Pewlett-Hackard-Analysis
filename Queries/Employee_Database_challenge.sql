@@ -69,4 +69,25 @@ ORDER BY t.emp_no, t.to_date DESC;
 --Question 1
 -- How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
+SELECT e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	t.title,
+	t.from_date,
+	t.to_date
+INTO rt
+FROM employees as e
+INNER JOIN titles2 as t
+ON (e.emp_no = t.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+	AND (t.to_date = '9999-01-01')
+ORDER BY e.emp_no;
 
+SELECT COUNT(rt.title), rt.title,
+	date_trunc('year', rt.birth_date) as year
+--INTO retiring_titles2
+FROM rt 
+WHERE (rt.birth_date BETWEEN '1955-01-01' AND '1955-12-31')
+GROUP BY rt.title, year
+ORDER BY year, count(rt.title) DESC;
