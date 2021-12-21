@@ -21,10 +21,4 @@ Provide a bulleted list with four major points from the two analysis deliverable
 
 
 ## Summary 
-Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
-
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-
-
-
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees
+There are 72 458 roles that will need to be filled during silver tsunami. The silver tsunami is defined as those born between 1952-1995 as they would be retiring within the next few years.  As it begins, 16,981 roles would need to be filled. This was calculated from the first year of retirees being born on 1952 that are currently employees. The breakdown of the roles that need to be filled by year can be found in the summary folder. There are not enough qualified, retirement-ready employees to mentor the next generation. There are 1549 mentorship eligible employees but there are 16, 981 roles in the first year of the silver tsunami.. 

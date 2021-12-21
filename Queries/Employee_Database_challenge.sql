@@ -84,6 +84,7 @@ WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 	AND (t.to_date = '9999-01-01')
 ORDER BY e.emp_no;
 
+--Change the year for every table, to get the full scope for all years put 1952-1955
 SELECT COUNT(rt.title), rt.title,
 	date_trunc('year', rt.birth_date) as year
 --INTO retiring_titles2
@@ -91,3 +92,14 @@ FROM rt
 WHERE (rt.birth_date BETWEEN '1955-01-01' AND '1955-12-31')
 GROUP BY rt.title, year
 ORDER BY year, count(rt.title) DESC;
+
+-- Total current employees
+SELECT COUNT(emp_no) FROM dept_emp
+WHERE to_date = '9999-01-01'
+
+--Total retiring employees in the first year
+SELECT COUNT (emp_no) FROM rt
+WHERE (birth_date BETWEEN '1952-01-01' AND '1952-12-31')
+
+--Total eligilbe for mentorship program
+SELECT COUNT(emp_no) FROM mentorship_eligibility
